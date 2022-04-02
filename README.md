@@ -24,7 +24,15 @@ dp auth
 docker network create devprime
 ```
 
+## DDD do projeto
+
+<p align="center">
+https://github.com/juliospassky/Devprime-Academy
+<img src="https://github.com/juliospassky/Devprime-Academy/imgs/001-DDD.png">
+</p>
 
 ## Criando um novo projeto
+
+###Inici
 
 
