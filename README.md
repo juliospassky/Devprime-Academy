@@ -25,6 +25,8 @@ docker network create devprime
 | MongoDB       | docker run --network devprime --name mongodb -p 27018:27018 -p 27019:27019 -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e MONGO_INITDB_ROOT_PASSWORD=LltF8Nx*yo -d mongo |
 | RabbitMQ      | docker run --network devprime --name rabbitmq -d -p 5672:5672 -p 15672:15672 -t rabbitmq:3-management |
 
+# ---------- Parte 2 ----------
+
 ## DDD do projeto
 
 <p align="center">
@@ -59,6 +61,15 @@ dp init
 Com o comando, é criado os padrões: persistência (Repository); Adapter Web com endpoints no formato Minimal APIs; DTOS; Event Handlers; Implementações de Testes de unidade; Injeção de dependência.
 
 
-# ---------- Parte 2 ----------
+# ---------- Parte 3 ----------
 
+## Fluxo da aplicação
+
+<p align="center">
+<img src="https://github.com/juliospassky/Devprime-Academy/blob/main/imgs/002-Flow.png">
+</p>
+
+<p align="center">
+<img src="https://github.com/juliospassky/Devprime-Academy/blob/main/imgs/002-Pipeline.png">
+</p>
 
