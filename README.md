@@ -1,6 +1,8 @@
 # Devprime-Academy
 Treinamento na plataforma de desenvolvimento devprime https://devprime.tech/
 
+# --------------------------------- Parte 1 ------------------------------------------
+
 ## Iniciando um novo projeto
 
 Instalação do CLI:
@@ -51,5 +53,7 @@ dp init
 
 Com o comando, é criado os padrões: persistência (Repository); Adapter Web com endpoints no formato Minimal APIs; DTOS; Event Handlers; Implementações de Testes de unidade; Injeção de dependência.
 
+
+# --------------------------------- Parte 2 ------------------------------------------
 
 
