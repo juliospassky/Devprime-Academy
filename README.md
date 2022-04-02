@@ -20,11 +20,10 @@ Criando uma rede docker:
 docker network create devprime
 ```
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| Docker Tool   | Command       |
+| ------------- |:-------------:|
+| MongoDB       | docker run --network devprime --name mongodb -p 27018:27018 -p 27019:27019 -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e MONGO_INITDB_ROOT_PASSWORD=LltF8Nx*yo -d mongo |
+| RabbitMQ      | docker run --network devprime --name rabbitmq -d -p 5672:5672 -p 15672:15672 -t rabbitmq:3-management |
 
 ## DDD do projeto
 
