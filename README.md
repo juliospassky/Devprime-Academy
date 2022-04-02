@@ -8,11 +8,6 @@ Instalação do CLI:
 dotnet tool install -g devprime.cli
 ```
 
-Instalação do CLI:
-```sh
-dotnet tool install -g devprime.cli
-```
-
 Logar no CLI com a licença adquirida:
 ```sh
 dp auth
