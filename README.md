@@ -3,23 +3,22 @@ Treinamento na plataforma de desenvolvimento devprime https://devprime.tech/
 
 ## Iniciando um novo projeto
 
-### Instalação do CLI
+Instalação do CLI:
 ```sh
 dotnet tool install -g devprime.cli
 ```
 
-### Instalação do CLI
+Instalação do CLI:
 ```sh
 dotnet tool install -g devprime.cli
 ```
 
-### Logar no CLI com a licença adquirida
+Logar no CLI com a licença adquirida:
 ```sh
 dp auth
 ```
 
-
-### Criando uma rede docker
+Criando uma rede docker:
 ```sh
 docker network create devprime
 ```
@@ -32,6 +31,8 @@ docker network create devprime
 
 ## Criando um novo projeto
 
-###Inici
-
+Iniciando um novo projeto com mongodb e rabbitmq
+```sh
+dp new order --state mongodb --stream rabbitmq
+```
 
