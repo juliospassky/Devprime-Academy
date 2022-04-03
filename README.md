@@ -77,9 +77,9 @@ dp add aggregate Payment
 
 Adicionar as propriedades no aggregate do Payment (Core -> Domain -> Aggregates -> Payment) 
 ```cs
-	public string CustomerName { get; private set; }
-    public Guid OrderId { get; private set; }
-    public double Value { get; private set; }
+public string CustomerName { get; private set; }
+public Guid OrderId { get; private set; }
+public double Value { get; private set; }
 ```
 
 ## Acelerando o desenvolvimento
@@ -95,22 +95,22 @@ dp add event OrderCreated -as PaymentService
 
 Adicionar as propriedades no DTO do Payment OrderCreatedEventDTO (Core -> Application -> Services -> Payment -> Model)
 ```cs
-	public string CustomerName { get; set; }
-    public string CustomerTaxId { get; set; }
-    public double Total { get; set; }
-    public Guid ID { get; set; }
+public string CustomerName { get; set; }
+public string CustomerTaxId { get; set; }
+public double Total { get; set; }
+public Guid ID { get; set; }
 ```
 
 Realizar o mapeamento do DTO na classe de EventStream (Adapters -> DevPrime -> Stream)
 ```cs
-	var command = new Payment()
-	{
-		CustomerName = dto.CustomerName,
-		OrderId = dto.ID,
-		Value = dto.Total
-	};
+var command = new Payment()
+{
+	CustomerName = dto.CustomerName,
+	OrderId = dto.ID,
+	Value = dto.Total
+};
 
-	paymentService.Add(command);
+paymentService.Add(command);
 ```
 A aplicação não deve realizar um novo evento de criação, para isso, deve-se excluir a linha de Send da classe PaymentCreatedEventHandler (Core -> Application -> EventHandlers -> Payment)
 ```cs
@@ -119,16 +119,16 @@ A aplicação não deve realizar um novo evento de criação, para isso, deve-se
 
 Adicionar o evento no arquivo de configuração (App -> appsettings.json), localizar "DevPrime_Stream" e alterar o Subscribe para: 
 ```cs
- "Subscribe": [
-        {
-          "queues": "orderevents"
-        }
-      ]
+"Subscribe": [
+	{
+	  "queues": "orderevents"
+	}
+  ]
 ```
 
 Ainda no arquivo de configuração, alterar as portas da aplicação
 ```cs
-	"url": "https://localhost:5003;http://localhost:5002",
+"url": "https://localhost:5003;http://localhost:5002",
 ```
 
 Todas as configurações foram concluídas para o propósito das aplicações, dessa forma, pode-se executar e testar as aplicações.
